@@ -1,8 +1,6 @@
 print("Sensors and Actuators")
 import time
 import serial.tools.list_ports
-
-
 def getPort():
   ports = serial.tools.list_ports.comports() 
   N = len(ports)
