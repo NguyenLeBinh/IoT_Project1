@@ -52,9 +52,12 @@ def serial_read_data(ser):
             return -1
     return 0
 while True:
+    
     setDevice1(True)
+    print("ON")
     time.sleep(2)
     setDevice1(False)
+    print("OFF")
     time.sleep(2)
 
 
