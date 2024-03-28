@@ -47,6 +47,21 @@ def setDevice1(state):
         ser.write(relay1_OFF)
     time.sleep(1)
     print(serial_read_data(ser))
+def setDevice2(state):
+    if state == True:
+        ser.write(relay2_ON)
+    else:
+        ser.write(relay2_OFF)
+    time.sleep(1)
+    print(serial_read_data(ser))
+def setDevice3(state):
+    if state == True:
+        ser.write(relay3_ON)
+    else:
+        ser.write(relay3_OFF)
+    time.sleep(1)
+    print(serial_read_data(ser))
+    
 def serial_read_data(ser):
     bytesToRead = ser.inWaiting()
     if bytesToRead > 0:
