@@ -63,10 +63,18 @@ def serial_read_data(ser):
 while True:
     
     setDevice1(True)
-    print("ON")
+    print("ON1")
+    setDevice2(True)
+    print("ON2")
+    setDevice3(True)
+    print("ON3")
     time.sleep(2)
     setDevice1(False)
-    print("OFF")
+    print("OFF1")
+    setDevice2(False)
+    print("OFF2")
+    setDevice3(False)
+    print("OFF3")
     time.sleep(2)
 
 
