@@ -79,10 +79,13 @@ while True:
     
     setDevice1(True)
     print("ON1")
+    time.sleep(1)
     setDevice2(True)
     print("ON2")
+    time.sleep(1)
     setDevice3(True)
     print("ON3")
+    time.sleep(1)
     time.sleep(2)
     setDevice1(False)
     print("OFF1")
@@ -90,7 +93,7 @@ while True:
     print("OFF2")
     setDevice3(False)
     print("OFF3")
-    time.sleep(2)
+    time.sleep(1)
 
 
 
