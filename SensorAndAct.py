@@ -2,7 +2,7 @@ print("Sensors and Actuators")
 
 import time
 import serial.tools.list_ports
-
+#Get port information
 def getPort():
     ports = serial.tools.list_ports.comports()
     N = len(ports)
@@ -15,13 +15,15 @@ def getPort():
             commPort = (splitPort[0])
     #return commPort
     return "/dev/ttyUSB0"
+
+# Define port name
 portName = "/dev/ttyUSB0"
 
 #portName = "/dev/ttyUSB1"
 print(portName)
 
 
-
+# Open port
 try:
     ser = serial.Serial(port=portName, baudrate=9600)
     print("Open successfully")
@@ -29,10 +31,9 @@ try:
 except:
     print("Can not open the port")
 
+# Declare relay adress 
 #relay1_ON  = [0, 6, 0, 0, 0, 255, 200, 91]
 #relay1_OFF = [0, 6, 0, 0, 0, 0, 136, 27]
-
-
 relay1_ON  = [2, 6, 0, 0, 0, 255, 200, 91]
 relay1_OFF = [2, 6, 0, 0, 0, 0, 136, 27]
 relay2_ON  = [3, 6, 0, 0, 0, 255, 200, 91]
@@ -40,6 +41,7 @@ relay2_OFF = [3, 6, 0, 0, 0, 0, 136, 27]
 relay3_ON  = [4, 6, 0, 0, 0, 255, 200, 91]
 relay3_OFF = [4, 6, 0, 0, 0, 0, 136, 27]
 
+# Set relay state ON = True, OFF = False
 def setDevice1(state):
     if state == True:
         ser.write(relay1_ON)
