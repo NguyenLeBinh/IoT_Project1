@@ -38,14 +38,6 @@ def setDevice1(state):
         ser.write(relay1_OFF)
     time.sleep(1)
     print(serial_read_data(ser))
-
-while True:
-    setDevice1(True)
-    time.sleep(2)
-    setDevice1(False)
-    time.sleep(2)
-
-
 def serial_read_data(ser):
     bytesToRead = ser.inWaiting()
     if bytesToRead > 0:
@@ -59,6 +51,14 @@ def serial_read_data(ser):
         else:
             return -1
     return 0
+while True:
+    setDevice1(True)
+    time.sleep(2)
+    setDevice1(False)
+    time.sleep(2)
+
+
+
 
 soil_temperature =[1, 3, 0, 6, 0, 1, 100, 11]
 def readTemperature():
