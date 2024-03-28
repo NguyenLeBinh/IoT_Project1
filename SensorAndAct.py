@@ -13,16 +13,17 @@ def getPort():
         if "USB" in strPort:
             splitPort = strPort.split(" ")
             commPort = (splitPort[0])
-    return commPort
-    # return "/dev/ttyUSB1"
+    #return commPort
+    return "/dev/ttyUSB0"
+portName = "/dev/ttyUSB0"
 
-portName = "/dev/ttyUSB1"
+#portName = "/dev/ttyUSB1"
 print(portName)
 
 
 
 try:
-    ser = serial.Serial(port=portName, baudrate=115200)
+    ser = serial.Serial(port=portName, baudrate=9600)
     print("Open successfully")
 except:
     print("Can not open the port")
