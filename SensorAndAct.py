@@ -96,12 +96,7 @@ def readMoisture():
     time.sleep(1)
     return serial_read_data(ser)
 
-while True:
-    print("TEST SENSOR")
-    print(readMoisture())
-    time.sleep(1)
-    print(readTemperature())
-    time.sleep(1)
+
 
 while True:
     
@@ -121,4 +116,11 @@ while True:
     print("OFF2")
     setDevice3(False)
     print("OFF3")
+    time.sleep(1)
+
+while True:
+    print("TEST SENSOR")
+    print(readMoisture())
+    time.sleep(1)
+    print(readTemperature())
     time.sleep(1)
